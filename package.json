@@ -1,0 +1,25 @@
+{
+  "name": "@8128-33550336/tsc-part-rust",
+  "version": "1.0.0",
+  "description": "run tsc partially",
+  "bin": {
+    "tsc-part": "./target/release/tsc-part"
+  },
+  "scripts": {
+    "install": "cargo build --release"
+  },
+  "publishConfig": {
+    "access": "restricted",
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/8128-33550336/tsc-part-rust.git"
+  },
+  "author": "8128-33550336",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/8128-33550336/tsc-part-rust/issues"
+  },
+  "homepage": "https://github.com/8128-33550336/tsc-part-rust#readme"
+}
