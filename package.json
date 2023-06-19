@@ -7,7 +7,7 @@
   },
   "scripts": {
     "install": "cargo build --release",
-    "postinstall": "npm link --global"
+    "postinstall": "npm link --local"
   },
   "publishConfig": {
     "access": "restricted",
