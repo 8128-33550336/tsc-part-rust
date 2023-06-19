@@ -12,6 +12,11 @@
     "access": "restricted",
     "registry": "https://npm.pkg.github.com/"
   },
+  "files": [
+    "src",
+    "Cargo.toml",
+    "Cargo.lock"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/8128-33550336/tsc-part-rust.git"
