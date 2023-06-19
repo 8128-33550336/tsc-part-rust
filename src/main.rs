@@ -25,8 +25,8 @@ fn tsc() {
         .expect("tsc error");
 }
 
-fn write_tsconfig(paths: Vec<String>, isDeclaration: bool) -> std::io::Result<()> {
-    let json = if isDeclaration {
+fn write_tsconfig(paths: Vec<String>, is_declaration: bool) -> std::io::Result<()> {
+    let json = if is_declaration {
         format!(
             r#"{{ "extends": "./tsconfig", "emitDeclarationOnly": true, "include": ["{}"] }}"#,
             paths.join("\", \"")
@@ -44,18 +44,18 @@ fn remove_tsconfig() {
 }
 fn main() {
     let mut files: Vec<String> = Vec::new();
-    let mut isDeclaration = true;
+    let mut is_declaration = true;
     for arg in std::env::args() {
         if arg.starts_with("-") {
             for char in arg.chars().skip(1) {
                 match char {
                     'd' => {
                         // declaration
-                        isDeclaration = true;
+                        is_declaration = true;
                     }
                     'e' => {
                         // emit
-                        isDeclaration = false;
+                        is_declaration = false;
                     }
                     _ => {
                         eprintln!("unknown command option \"{}\"", char);
@@ -67,7 +67,7 @@ fn main() {
             files.push(arg);
         }
     }
-    write_tsconfig(files, isDeclaration).expect("write tsconfig error");
+    write_tsconfig(files, is_declaration).expect("write tsconfig error");
     tsc();
     remove_tsconfig();
 }
