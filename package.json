@@ -6,7 +6,8 @@
     "tsc-part": "./target/release/tsc-part"
   },
   "scripts": {
-    "install": "cargo build --release"
+    "install": "cargo build --release",
+    "postinstall": "npm link"
   },
   "publishConfig": {
     "access": "restricted",
