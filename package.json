@@ -3,11 +3,10 @@
   "version": "1.1.2",
   "description": "run tsc partially",
   "bin": {
-    "tsc-part": "./target/release/tsc-part"
+    "tsc-part": "./entry.sh"
   },
   "scripts": {
-    "install": "cargo build --release",
-    "postinstall": "npm link --local"
+    "build": "cargo build --release"
   },
   "publishConfig": {
     "access": "restricted",
