@@ -1,6 +1,6 @@
 {
   "name": "@8128-33550336/tsc-part-rust",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "run tsc partially",
   "bin": {
     "tsc-part": "./tsc-part"
