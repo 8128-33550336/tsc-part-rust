@@ -6,7 +6,7 @@
     "tsc-part": "./tsc-part"
   },
   "scripts": {
-    "build": "cargo build --release && mv ./target/release/tsc-part ./tsc-part",
+    "build": "cargo build --release && ls -sf ./target/release/tsc-part ./tsc-part",
     "install": "npm run build"
   },
   "publishConfig": {
