@@ -28,7 +28,7 @@ fn tsc() {
 fn write_tsconfig(paths: Vec<String>, is_declaration: bool) -> std::io::Result<()> {
     let json = if is_declaration {
         format!(
-            r#"{{ "extends": "./tsconfig", "emitDeclarationOnly": true, "include": ["{}"] }}"#,
+            r#"{{ "extends": "./tsconfig", "compilerOptions": {{ "emitDeclarationOnly": true }}, "include": ["{}"] }}"#,
             paths.join("\", \"")
         )
     } else {
