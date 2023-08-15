@@ -7,7 +7,7 @@
   },
   "scripts": {
     "build": "cargo build --release && ls -sf ./target/release/tsc-part ./tsc-part",
-    "install": "npm run build"
+    "postinstall": "npm run build && echo 'installed!!'"
   },
   "publishConfig": {
     "access": "restricted",
